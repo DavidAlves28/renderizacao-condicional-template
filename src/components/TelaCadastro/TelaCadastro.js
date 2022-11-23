@@ -1,6 +1,9 @@
+import TelaUsuarioCadastrado from "../TelaUsuarioCadastrado/TelaUsuarioCadastrado.js";
 import { Form, FormContainer, Input, StyledLabel, SendButton, BackToLoginButton } from "./styled";
 
-function TelaCadastro(props) {
+function TelaCadastro({  irPara }) {
+
+
   return (
     <FormContainer>
       <h1>Cadastro </h1>
@@ -21,10 +24,15 @@ function TelaCadastro(props) {
           Confirmação da senha:
           <Input id="descricao" />
         </StyledLabel>
-        <SendButton >Cadastrar</SendButton>
-        <BackToLoginButton >Já possuo um cadastro</BackToLoginButton>
+        <SendButton onClick={() => irPara(3)} >Cadastrar</SendButton>
+        <BackToLoginButton onClick={() => irPara(1)}>Já possuo um cadastro</BackToLoginButton>
       </Form>
-    </FormContainer>
+      </FormContainer> 
+      
+      
+    
+     
+      
   );
 }
 
